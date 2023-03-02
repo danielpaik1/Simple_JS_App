@@ -14,19 +14,20 @@ let pokemonList = [
         height: .3, 
         types: ['grass', 'electricity']
     }
-];
+];// objects within arrays: list of pokemons
 
-for (let i = 0; i < pokemonList.length; i++) {
-        if (pokemonList[i].height >= .7 && pokemonList[i].height > .5) {
-         console.log(pokemonList[i].name + "(height:" + pokemonList[i].height + ")." + "Wow! It's BIG pokemon!");
-         document.write(pokemonList[i].name + "(height:" + pokemonList[i].height + ")." + "Wow! It's BIG pokemon!" + "<br>");
-       } 
-       else if (pokemonList[i].height <= .5 && pokemonList[i].height > .3) {
-          console.log(pokemonList[i].name + "(height:" + pokemonList[i].height + ")." + "It's an average pokemon.");   
-          document.write(pokemonList[i].name + "(height:" + pokemonList[i].height + ")." + "It's an average pokemon."+ "<br>");   
-       } 
-       else {
-         console.log(pokemonList[i].name + "(height:" + pokemonList[i].height + ")." + "It's a small pokemon.");
-         document.write(pokemonList[i].name + "(height:" + pokemonList[i].height + ")." + "It's a small pokemon.");
-       }
-}
+pokemonList.forEach(function(pokemon){
+    if (pokemon.height >= .7 && pokemon.height > .5) {
+        console.log(pokemon.name + "(height:" + pokemon.height + ")." + "Wow! It's BIG pokemon!");
+        document.write(pokemon.name + "(height:" + pokemon.height + ")." + "Wow! It's BIG pokemon!" + "<br>");
+      } 
+      else if (pokemon.height <= .5 && pokemon.height > .3) {
+         console.log(pokemon.name + "(height:" + pokemon.height + ")." + "It's an average pokemon.");   
+         document.write(pokemon.name + "(height:" + pokemon.height + ")." + "It's an average pokemon."+ "<br>");   
+      } 
+      else {
+        console.log(pokemon.name + "(height:" + pokemon.height + ")." + "It's a small pokemon.");
+        document.write(pokemon.name + "(height:" + pokemon.height + ")." + "It's a small pokemon.");
+      }
+
+});
