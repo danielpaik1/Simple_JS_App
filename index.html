@@ -6,9 +6,16 @@
     <link href="CSS/styles.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>pokedex</h1>
+    <div class="pokedex">
+      <img class="pokemon-img-header" src="img/pokemon-logo-header.png" alt="">
+      <div class="topnav">
+        <input type="text" id="search" class="search" placeholder="Search your Pokemon">
+      </div>
+      <div id="poke_container" class="poke-container">
+      </div>
         <ol class="pokemon-list"></ol>
         <div id="modal-container"></div>
+    </div>
     <script src="JS/promise-polyfill.js"></script>
     <script src="JS/fetch.umd.js"></script>
     <script
