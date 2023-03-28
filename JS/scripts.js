@@ -1,7 +1,8 @@
 let pokemonRepository = (function () {
     let repository = [];// objects within arrays: list of pokemons. erased because we are going to push the list from link  
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
-
+    let search = document.querySelector("search");
+    
     function add(pokemon) {
         repository.push(pokemon);
     }
@@ -39,7 +40,6 @@ let pokemonRepository = (function () {
       }
     function loadDetails(item) {
         let url = item.detailsUrl;
-        console.log(item.detailsUrl)
         return fetch(url).then(function (response) {
           return response.json();
         }).then(function (details) {
@@ -79,6 +79,7 @@ let pokemonRepository = (function () {
         contentElement.innerText = text;
 
         let myimage = document.createElement('img');
+        myimage.classList.add('modal-img'),
         myimage.src = img;
         //attaching what was created 
         modalContainer.appendChild(modal);
