@@ -1,20 +1,32 @@
-*{
-    box-sizing: border-box;
-    
-}
+.selector-for-some-widget {
+    box-sizing: content-box;
+  }
 body {
-    background: #D0C2FF;
+    background: white;
     display: block;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: 'lato';
+    font-family: 'Darumadrop One', cursive;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 30px;
     /* sets the font size to 16px */
     line-height: 1.6;
     /* sets the line-height to 1.6 */
     text-align: auto;
+}
+.modal {
+    width: 100%;
+    border: 4px solid black;
+    
+}
+.page-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    max-width: 1200px;
+    margin: 20 px auto;
+    margin-top: 50px;
 }
 
 h1 {
@@ -48,26 +60,26 @@ h3 {
 }
 
 .topnav input[type=text] {
-    float: right;
+    float: none;
     padding: 6px;
-    border: none;
     margin-top: 8px;
     margin-right: 17px;
     border: 1px solid #ccc;
+    width: 200;
 }
 
-.button-class {
+button {
     text-align: center;
-    border: none;
+    border: 1px;
     color: white;
-    margin: 10px;
+    margin: 1px;
     cursor: pointer;
     transition-duration: 0.4s;
     text-transform: capitalize;
     backface-visibility: hidden;
     position: relative;
     cursor: pointer;
-    background: #fff;
+    background: #037AFB;
     border-radius: 0px;
     /* border-width: 3px 3px 3px 3px; */
     padding: 5px 20px 5px 20px;
@@ -75,6 +87,7 @@ h3 {
     
 }
 .pokemon-list {
+    margin-top: 30px;
     list-style-type: none;
     padding: 0;
     margin: 0 auto;
@@ -84,10 +97,10 @@ h3 {
     align-items: center;
     justify-content: center;
     max-width: auto;
-    font-size: 16px;
+    /* font-size: 26px;
     font-family: Helvetica Neue;
     font-weight: 900;
-    font-style: normal;
+    font-style: normal; */
     }
 
 ol {
@@ -145,9 +158,9 @@ ol {
     margin: auto;
     display: inline-block;
     box-sizing: border-box;
-    background: #FFF9C3;
+    background: #037AFB;
     padding: 15px;
-    height: 70%;
+    height: auto;
     max-width: 400px;
     justify-content: center;
 }
